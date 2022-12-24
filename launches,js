@@ -1,0 +1,25 @@
+const launchList = document.getElementById("launch-list");
+
+const launches = [
+  {
+    date: "2022-01-01",
+    description: "NASA Artemis 1 mission to the Moon",
+  },
+  {
+    date: "2022-03-01",
+    description: "SpaceX Crew Dragon mission to the International Space Station",
+  },
+  {
+    date: "2022-06-01",
+    description: "Arianespace Ariane 6 mission to launch telecommunications satellite",
+  },
+];
+
+launches.forEach((launch) => {
+  const launchItem = document.createElement("li");
+  launchItem.innerHTML = `
+    <span class="launch-date">${launch.date}</span>
+    <span class="launch-description">${launch.description}</span>
+  `;
+  launchList.appendChild(launchItem);
+});
